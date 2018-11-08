@@ -83,6 +83,15 @@ end
 def over?
   won? || draw?
 end
+
+def play
+  turn until over?
+  if won?
+    puts "Congratulations #{winner}!"
+  elsif draw?
+    puts "Cat's Game!"
+  end
+end
       
   
 end
