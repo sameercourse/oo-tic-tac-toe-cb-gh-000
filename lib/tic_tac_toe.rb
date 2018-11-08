@@ -51,13 +51,7 @@ class TicTacToe
       display_board
       
     else
-     until valid_move?(index)
-        puts "enter a valid move between 1-9"
-          input=gets.strip
-          index=input_to_index(input)
-      end
-      move(index,current_player)
-      display_board
+      turn
     end
   end
   
