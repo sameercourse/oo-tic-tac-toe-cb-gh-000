@@ -32,14 +32,8 @@ class TicTacToe
     
   end
   
-  def valid_move?(position)
-    
-    if position>=1 && position<=9 && @board[position]==" "
-      return true
-    else
-      return false
-    end
-    
+  def valid_move?(index)
+    index.between?(0, 8) && !position_taken?(index)
   end
   
   def turn
